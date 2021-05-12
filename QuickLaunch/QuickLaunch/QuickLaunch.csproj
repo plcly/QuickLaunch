@@ -15,6 +15,15 @@
     <ProjectReference Include="..\Services\QuickLaunch.Services\QuickLaunch.Services.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <None Update="LocalApplications.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Applications.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\48x48_logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Icons\48x48_tool.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

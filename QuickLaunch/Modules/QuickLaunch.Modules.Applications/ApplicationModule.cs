@@ -6,11 +6,11 @@ using QuickLaunch.Modules.Applications.Views;
 
 namespace QuickLaunch.Modules.Applications
 {
-    public class ApplicationsModule : IModule
+    public class ApplicationModule : IModule
     {
         private readonly IRegionManager _regionManager;
 
-        public ApplicationsModule(IRegionManager regionManager)
+        public ApplicationModule(IRegionManager regionManager)
         {
             _regionManager = regionManager;
         }

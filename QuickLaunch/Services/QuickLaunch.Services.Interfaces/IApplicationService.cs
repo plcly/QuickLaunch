@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuickLaunch.Services.Interfaces
 {
-    public interface IApplicationsService
+    public interface IApplicationService
     {
         List<ApplicationDto> GetAllApplications();
     }

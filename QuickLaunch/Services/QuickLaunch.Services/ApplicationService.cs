@@ -10,10 +10,14 @@ using System.Threading.Tasks;
 
 namespace QuickLaunch.Services
 {
-    public class ApplicationsService: IApplicationsService
+    public class ApplicationService : IApplicationService
     {
         private List<ApplicationDto> _appList;
+#if DEBUG
+        const string jsonFile = "LocalApplications.json";
+#else
         const string jsonFile = "Applications.json";
+#endif
         public List<ApplicationDto> GetAllApplications()
         {
             if (File.Exists(jsonFile))

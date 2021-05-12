@@ -20,12 +20,12 @@ namespace QuickLaunch
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<IApplicationsService, ApplicationsService>();
+            containerRegistry.RegisterSingleton<IApplicationService, ApplicationService>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            moduleCatalog.AddModule<ApplicationsModule>();
+            moduleCatalog.AddModule<ApplicationModule>();
         }
     }
 }
