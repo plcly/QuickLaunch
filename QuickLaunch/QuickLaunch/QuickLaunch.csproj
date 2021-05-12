@@ -14,4 +14,12 @@
     <ProjectReference Include="..\Services\QuickLaunch.Services.Interfaces\QuickLaunch.Services.Interfaces.csproj" />
     <ProjectReference Include="..\Services\QuickLaunch.Services\QuickLaunch.Services.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="Icons\48x48_tool.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Icons\64x64_vs.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

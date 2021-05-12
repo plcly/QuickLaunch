@@ -2,6 +2,7 @@
 using Prism.Modularity;
 using Prism.Regions;
 using QuickLaunch.Core;
+using QuickLaunch.Modules.Applications.Views;
 
 namespace QuickLaunch.Modules.Applications
 {
@@ -16,12 +17,12 @@ namespace QuickLaunch.Modules.Applications
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            //_regionManager.RequestNavigate(RegionNames.ContentRegion, "ViewA");
+            _regionManager.RequestNavigate(RegionNames.ContentRegion, "ApplicationView");
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            //containerRegistry.RegisterForNavigation<ViewA>();
+            containerRegistry.RegisterForNavigation<ApplicationView>();
         }
     }
 }

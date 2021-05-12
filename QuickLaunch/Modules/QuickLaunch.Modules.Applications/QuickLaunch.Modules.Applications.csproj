@@ -11,8 +11,4 @@
     <ProjectReference Include="..\..\QuickLaunch.Core\QuickLaunch.Core.csproj" />
     <ProjectReference Include="..\..\Services\QuickLaunch.Services.Interfaces\QuickLaunch.Services.Interfaces.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
-  </ItemGroup>
 </Project>
