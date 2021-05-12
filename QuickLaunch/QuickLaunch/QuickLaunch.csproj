@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>QuickLaunch</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.DryIoc" Version="8.0.0.1909" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modules\QuickLaunch.Modules.Applications\QuickLaunch.Modules.Applications.csproj" />
+    <ProjectReference Include="..\QuickLaunch.Core\QuickLaunch.Core.csproj" />
+    <ProjectReference Include="..\Services\QuickLaunch.Services.Interfaces\QuickLaunch.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\Services\QuickLaunch.Services\QuickLaunch.Services.csproj" />
+  </ItemGroup>
+</Project>
