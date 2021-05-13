@@ -33,6 +33,7 @@ namespace QuickLaunch.Services
                             _appList.ForEach(app =>
                             {
                                 app.IconPath = Path.Combine(Directory.GetCurrentDirectory(), app.IconPath);
+                                app.CategoryIcon = Path.Combine(Directory.GetCurrentDirectory(), app.CategoryIcon);
                             });
                         }
                         catch (Exception)

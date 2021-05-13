@@ -22,6 +22,9 @@
     <Resource Include="functions.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Update="Icons\16x16_md.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="LocalApplications.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

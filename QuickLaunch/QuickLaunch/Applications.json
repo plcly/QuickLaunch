@@ -4,20 +4,26 @@
     "FilePath": "-executionpolicy unrestricted C:\\Scripts\\pw.ps1",
     "CMD": "powershell.exe",
     "CMDPara": null,
-    "IconPath": "Icons\\powershell.png"
+    "IconPath": "Icons\\powershell.png",
+    "Category": "PowerShell",
+    "CategoryIcon": "Icons\\powershell.png"
   },
   {
     "Name": "VSCode Path",
     "FilePath": "C:\\VSCode",
     "CMD": "c:\\code.exe",
     "CMDPara": null,
-    "IconPath": "Icons\\vscode.png"
+    "IconPath": "Icons\\vscode.png",
+    "Category": "VSCode",
+    "CategoryIcon": "Icons\\vscode.png"
   },
   {
     "Name": "Image Quick Handle",
     "FilePath": "C:\\Users\\admin\\source\\repos\\WPFImage\\WPFImage.ChainImage\\bin\\Debug\\net5.0-windows\\WPFImage.ChainImage.exe",
     "CMD": null,
     "CMDPara": null,
-    "IconPath": "Icons\\exe.png"
-  },
+    "IconPath": "Icons\\exe.png",
+    "Category": "Exe",
+    "CategoryIcon": "Icons\\exe.png"
+  }
 ]

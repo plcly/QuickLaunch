@@ -15,6 +15,9 @@ namespace QuickLaunch.Infrastructure
         public string FilePath { get; set; }
         public string CMD { get; set; }
         public string CMDPara { get; set; }
+        public string Category { get; set; }
+        public string CategoryIcon { get; set; }
+        
 
         public void Run()
         {

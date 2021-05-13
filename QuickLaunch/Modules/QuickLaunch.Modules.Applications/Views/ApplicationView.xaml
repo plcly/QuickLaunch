@@ -6,43 +6,99 @@
     xmlns:prism="http://prismlibrary.com/"
     prism:ViewModelLocator.AutoWireViewModel="True"
     >
-    <ItemsControl Margin="0,20,0,0" ItemsSource="{Binding ApplicationDtoList}">
-        <ItemsControl.ItemsPanel>
-            <ItemsPanelTemplate>
-                <WrapPanel>
-                </WrapPanel>
-            </ItemsPanelTemplate>
-        </ItemsControl.ItemsPanel>
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <Button
-                    Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}, Path=DataContext.ExcuteApplication}"
-                    CommandParameter="{Binding}"
-                    Style="{StaticResource MaterialDesignFlatButton}"
-                    >
-                    <Button.Content>
-                        <StackPanel Orientation="Horizontal">
-                            <Image
-                                Width="24"
-                                Height="24"
-                                Source="{Binding IconPath}"
-                                >
-                            </Image>
-                            <TextBlock
-                                Margin="3"
-                                VerticalAlignment="Center"
-                                FontSize="20"
-                                Text="{Binding Name}"
-                                >
-                            </TextBlock>
-                        </StackPanel>
-                    </Button.Content>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150">
+            </ColumnDefinition>
+            <ColumnDefinition>
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListBox ItemsSource="{Binding Categories}">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel>
+                    </StackPanel>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Button
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListBox}}, Path=DataContext.SelectCategory}"
+                            CommandParameter="{Binding}"
+                            >
+                            <StackPanel Orientation="Horizontal">
+                                <Image
+                                    Width="24"
+                                    Height="24"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Source="{Binding CategoryIcon}"
+                                    >
+                                </Image>
+                                <TextBlock FontSize="24" Text="{Binding Category}">
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
 
-                </Button>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ItemsControl
+            Grid.Column="1"
+            Margin="0,20,0,0"
+            ItemsSource="{Binding ApplicationDtoList}"
+            >
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel>
+                    </WrapPanel>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button
+                        Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}, Path=DataContext.ExcuteApplication}"
+                        CommandParameter="{Binding}"
+                        Style="{StaticResource MaterialDesignFlatButton}"
+                        >
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Image
+                                    Width="24"
+                                    Height="24"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Source="{Binding IconPath}"
+                                    >
+                                </Image>
+                                <TextBlock
+                                    Margin="5,0,0,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="24"
+                                    Text="{Binding Name}"
+                                    >
+                                </TextBlock>
+                            </StackPanel>
+                        </Button.Content>
 
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
+                    </Button>
 
-    </ItemsControl>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+        </ItemsControl>
+
+    </Grid>
 
 </UserControl>
