@@ -16,7 +16,7 @@
         <ListBox ItemsSource="{Binding Categories}">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
-                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                    <Setter Property="VerticalContentAlignment" Value="Stretch" />
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
                 </Style>
             </ListBox.ItemContainerStyle>
@@ -30,6 +30,7 @@
                 <DataTemplate>
                     <Grid>
                         <Button
+                            HorizontalContentAlignment="Left"
                             Background="Transparent"
                             BorderThickness="0"
                             Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListBox}}, Path=DataContext.SelectCategory}"
@@ -37,14 +38,18 @@
                             >
                             <StackPanel Orientation="Horizontal">
                                 <Image
-                                    Width="24"
-                                    Height="24"
+                                    Width="20"
+                                    Height="20"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
                                     Source="{Binding CategoryIcon}"
                                     >
                                 </Image>
-                                <TextBlock FontSize="24" Text="{Binding Category}">
+                                <TextBlock
+                                    Margin="5,0,0,0"
+                                    FontSize="20"
+                                    Text="{Binding Category}"
+                                    >
                                 </TextBlock>
                             </StackPanel>
                         </Button>
