@@ -7,7 +7,7 @@
     xmlns:prism="http://prismlibrary.com/"
     Title="{Binding Title}"
     Width="525"
-    Height="350"
+    Height="300"
     prism:ViewModelLocator.AutoWireViewModel="True"
     Background="{DynamicResource MaterialDesignPaper}"
     Icon="../functions.ico"
@@ -16,35 +16,23 @@
     >
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50">
+            <RowDefinition Height="40">
             </RowDefinition>
             <RowDefinition>
             </RowDefinition>
         </Grid.RowDefinitions>
-        <materialDesign:Card Background="{DynamicResource PrimaryHueDarkBrush}" Foreground="GhostWhite">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50">
-                    </ColumnDefinition>
-                    <ColumnDefinition>
-                    </ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Image
-                    Width="40"
-                    Height="40"
-                    Source="pack://siteoforigin:,,,/Icons/48x48_logo.png"
-                    >
-                </Image>
-                <TextBlock
-                    Grid.Column="1"
-                    Margin="-50,0,0,0"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    FontSize="20"
-                    Text="点击图标打开程序"
-                    >
-                </TextBlock>
-            </Grid>
+        <materialDesign:Card
+            Margin="0,0,0,0"
+            Background="{DynamicResource PrimaryHueDarkBrush}"
+            Foreground="GhostWhite"
+            >
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="20"
+                Text="点击图标打开程序"
+                >
+            </TextBlock>
         </materialDesign:Card>
 
         <ContentControl Grid.Row="1" prism:RegionManager.RegionName="{x:Static core:RegionNames.ContentRegion}" />
