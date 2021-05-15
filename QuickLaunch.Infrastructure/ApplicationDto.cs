@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,15 +18,20 @@ namespace QuickLaunch.Infrastructure
         public string CMDPara { get; set; }
         public string Category { get; set; }
         public string CategoryIcon { get; set; }
-        
+
 
         public void Run()
         {
             ProcessStartInfo p = new ProcessStartInfo();
+            Process pro = new Process();
             p.UseShellExecute = true;
             if (string.IsNullOrEmpty(CMD))
             {
-                p.FileName = Path.Combine(Directory.GetCurrentDirectory(), FilePath);
+                if (Win32Helper.SwitchExeProcess(FilePath))
+                {
+                    return;
+                }
+                p.FileName = FilePath;
             }
             else
             {
@@ -33,10 +39,11 @@ namespace QuickLaunch.Infrastructure
                 p.Arguments = " " + CMDPara + " " + FilePath;
             }
 
-            Process pro = new Process();
             pro.StartInfo = p;
             pro.Start();
             pro.Close();
         }
+
+        
     }
 }
